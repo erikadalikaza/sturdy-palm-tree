@@ -1,8 +1,8 @@
-name: UbuntuStrategy_Duino
+name: UbuntuStrategy
 on: [push, pull_request]
 jobs:
   build:
-    name: UbuntuStrategy_Duino
+    name: UbuntuStrategy
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 20
@@ -25,7 +25,7 @@ jobs:
     - name: Download
       run: |
   postgres-2:
-    name: UbuntuStrategy_Duino
+    name: UbuntuStrategy
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 30
@@ -56,4 +56,4 @@ jobs:
     - name: chmod geckodriver
       run: chmod +x geckodriver
     - name: Run
-      run: python sifu.py
+      run: python siren.py
